@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            background-color: rgb(53, 31, 5);
+            color: rgb(47, 116, 56);
+            border-radius: 40px;
+            margin:-10px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .name{
+            color: rgb(155, 235, 235);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            font-style: bold;
+            border-radius: 10px;
+            padding:10px;
+        }
+        .email{
+            color: rgb(155, 235, 235);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            font-style: bold;
+            border-radius: 10px;
+            padding:10px;
+        }
+        .password{
+            color: rgb(155, 235, 235);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            font-style: bold;
+            border-radius: 10px;
+            padding:10px;
+        }
+        .address{
+            color: rgb(155, 235, 235);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            font-style: bold;
+            border-radius: 10px;
+            padding:10px;
+        }
+        .block{
+            background-color: rgb(195, 190, 196);
+            color: rgb(192, 39, 212);
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style:normal;
+            margin:2px;
+            padding: 40px;
+        }
+        .submit{
+            color: rgba(58, 34, 3, 0.801);
+            border-radius: 30px;
+            margin-bottom: 10px;
+            padding:5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="block">
+        <h1>Registration Form</h1>
+    </div>
+    <div class="block">
+         <form method="post" class="form">
+        <label for="name" class="name">User name </label>
+        <input type="text" id="name"class="name" name="name" placeholder="Username">
+        <br>
+        <label for="Email" class="email">Email</label>
+        <input type="email" class="email"id="email" placeholder="Email">
+        <br>
+        <label for="Password" class="password">Password</label>
+        <input type="password" class="password" id="password", name="password" placeholder="Password">
+        <br>
+        <label for="address" class="address">Address</label>
+        <input type="text" id="address" class="address" placeholder="Address">
+        <button type="submit" class="submit">submit</button>
+    </form>
+    </div>
+</body>
+</html>

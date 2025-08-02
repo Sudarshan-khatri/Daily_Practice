@@ -100,3 +100,91 @@ console.log(v1.toPrecision(1));
 
 
 console.log(Math.min())
+
+console.log(Math.random() === Math.random())
+// Write code to convert degrees to radians
+const deg=45
+let rad=deg*(Math.PI/180)
+console.log(rad)
+
+
+console.log(Math.abs(-0))
+
+
+
+//  Write code to calculate the distance between two points (x1, y1) and (x2, y2)
+let x1=12
+let x2=14
+let y1=3
+let y2=5
+let x=x1-y1
+let y=x2-y2
+const dist=Math.sqrt(Math.pow(x,2)+( Math.pow(y,2)))
+console.log(dist)
+
+
+console.log(Math.round(4.5))
+
+// Write code to generate a random floating-point number in a range
+function getRandom(min,max){
+    return Math.random()*(max-min)+min
+}
+
+console.log(getRandom(2,5))
+console.log(Number.MAX_SAFE_INTEGER)
+
+// Write code to check if a number is safe integer.
+
+if(Number.isSafeInteger()){
+    console.log(`Number is safe integer`)
+}
+else{
+    console.log("Sorry")
+}
+console.log(Math.log10(100))
+
+let radius=10
+let area=Math.PI*radius*radius
+console.log(area)
+
+console.log(Math.cos(0))
+
+
+//  Write code to calculate permutations of n items taken r at a time
+function factorial(n){
+    if(n==0 ||n==1){
+        return 1
+    }
+    return n*factorial(n-1)
+}
+function permutation(n,r){
+    return factorial(n)/factorial(n-r)
+}
+console.log(permutation(3,1))
+console.log(permutation(5,2))
+console.log(permutation(8,3))
+
+console.log(Math.sin(Math.PI / 2))
+// Write code to calculate the difference between two dates in days
+let d1=new Date("2024-03-04")
+let d2=new Date("2026-03-04")
+console.log(d1-d2)
+
+// Write code to convert a number to binary string
+let nm1=121212
+console.log(nm1.toString(2))
+
+
+// Write code to calculate compound interest given principal, rate, time.
+function interest(p,t,r){
+    return (p*t*r)/100
+}
+console.log(interest(3000,4,2))
+
+
+console.log(Number.isFinite(Infinity))
+// Write code to round a number up to the nearest 10.
+console.log(Math.ceil(35.5))
+
+//  Write code to generate a random hex color code
+console.log(Math.random()*0Xffffff)

@@ -1,12 +1,100 @@
 // Write a constructor function to create objects with name and age properties.
-// 2. Create an object using the constructor function with new.
+function detail(name,age){
+    this.name=name
+    this.age=age
+    this.greet=function(){
+        console.log(`my name is ${this.name} and age is ${this.age}`)
+    }
+}
+const detail1=new detail("sudarshan","khatri")
+detail1.greet()
+
+// using class//
+class detail2{
+    detail(name,age){
+        this.name=name
+        this.age=age
+    }
+    displayInfo(){
+        console.log(`my name is ${this.name} and age is ${this.age}`)
+    }
+}
+const dt=new detail2("sudarshan","khatri")
+dt.displayInfo()
 // 3. Add a method to the constructor’s prototype.
+class car{
+    constructor(brand,id){
+        this.brand=brand
+        this.id=id
+    }
+    displayCar(){
+        console.log(`car id::${this.brand} and car brand::${this.brand}`)
+    }
+}
+const cr=new car("hayanju",432432432)
+cr.displayCar()
 // 4. Explain difference between methods added inside constructor vs prototype.
+function stat(nm,age){
+    this.name=nm
+    this.age=age
+    this.greet1=function(){
+        console.log(`name :: ${this.name} age::${this.age}`)
+    }
+}
+const protObj=new stat("sudarshan","khatri")
+protObj.greet1()
+
+// class 
+class bio{
+    constructor(relation,status){
+        this.relation=true
+        this.status=true
+    }
+    displayRelation(){
+        console.log(`Relationship ${this.relation} and the status is ${this.status}`)
+    }
+}
+const Bio=new bio("hello","sudarshan")
+Bio.displayRelation()
 // 5. Write code to check if an object is instance of a constructor.
+console.log(Bio instanceof(bio))
 // 6. Write a constructor that accepts parameters and assigns properties.
+class Construct{
+    constructor(data,no){
+        this.data=data
+        this.no=no
+    }
+    displayConstruct(){
+        console.log(`Data ${this.data} and no is ${this.no}`)
+    }
+}
+const hlo=new Construct("This is the bunch of data",2323)
+hlo.displayConstruct()
 // 7. Override a prototype method for a specific object instance.
+function OverrideMethod(data1,data2){
+    this.data1=data1
+    this.data2=data2
+    this.OverrideMethod=function(){
+        console.log("gfgfgdfgfdgdfgdfgfd")
+    }
+}
+const  over=new OverrideMethod()
+over.OverrideMethod()
 // 8. Write code to create multiple objects using a constructor function.
-// 9. Demonstrate constructor function hoisting.
+function multipleObj(Obj1,Obj2){
+    console.log(Obj1)
+    console.log(Obj2)
+}
+const object1={
+    dog:"japnese blitz",
+    age:34
+}
+const object2={
+    cat:"malian safert",
+    agec:34 
+}
+multipleObj(object1,object2)
+// 9. Dmonstrate constructor function hoisting.
 // 10. Write code to add static properties or methods to a constructor function.
 // 11. Explain what happens if you call a constructor function without new.
 // 12. Write code to create inheritance using constructor functions.

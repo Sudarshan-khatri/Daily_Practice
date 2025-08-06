@@ -246,16 +246,108 @@ console.log(frz)
 console.log(freezeObj.profile.twitter="dfdsfdsf")
 console.log(typeof frz)
 // 36. Write code to list all enumerable property names, including inherited ones.
+let enumerableExmp={
+    greet:"hello",
+    nm:"sudarshan",
+    hi:"fuck u",
+    ji:"muji"
+}
+let enumer=(enumerableExmp,"kxakbr",{
+    value:"iam here to give u nonsense comment",
+    enumerable:true,
+    writable:true,
+})
+console.log(enumer.value)
 // 37. Create an object with symbol keys and show how to access them.
-// 38. Use Object.getOwnPropertyNames() and explain difference from
-// Object.keys().
+const userId=Symbol()
+let symbExmp={
+    name:"hello",
+    [userId]:12122
+}
+console.log(symbExmp)
+console.log(symbExmp[userId])
+// 38. Use Object.getOwnPropertyNames() and explain difference from Object.keys().
+const getProperty={
+    a:1,
+    b:2,
+    c:3
+}
+console.log(Object.getOwnPropertyNames(getProperty))
 // 39. Create an object with a method that returns the object’s keys.
+const exmp={
+    football:1,
+    volleyball:6,
+    socker:6
+}
+console.log(Object.getOwnPropertyNames(exmp))
+
 // 40. Explain how to prevent extensions to an object.
+const myobj={
+    baseball:121,
+    hell:34,
+    ximeki:12
+}
+console.log(myobj)
+Object.preventExtensions(myobj)
+console.log(myobj)
+myobj.c="hgeooo"
+myobj.d="dfdsfds"
+console.log(myobj)
 // 41. Demonstrate prototype pollution risks with examples.
+function merge(target, source) {
+    for (let key in source) {
+        // Vulnerable: No check for special properties like __proto__
+        target[key] = source[key];
+    }
+    return target;
+}
+
+// Simulated user input
+let userInput = JSON.parse('{"__proto__": {"isAdmin": true}}');
+
+// Merge user input into a safe object
+let config = {};
+merge(config, userInput);
+
+// Now ANY object will have `isAdmin` = true
+let obj1 = {};
+console.log(obj.isAdmin); // true (unexpected!)
 // 42. Write code to merge objects with conflicting keys, explaining overwrites.
+function merges(target,source){
+    for(let key in source){
+        target[key]=source[key]
+    }
+    return target
+}
+console.log(merge(2,3))
+console.log(merge(4,5))
 // 43. Use Object.entries() and Object.fromEntries() together.
+let entry={
+    kaka:"santosh",
+    Kaka1:"Basant",
+    dai:"upendra"
+}
+const ent=Object.entries(entry)
+console.log(ent)
+const froment=Object.fromEntries(ent)
+console.log(froment)
 // 44. Write code to clone an object without prototype using Object.create(null).
+let code={
+    nameZ:"sudarshan",
+    geng:"yes"
+}
+let clone=Object.create(null)
+for(let key in code){
+    if(Object.prototype.hasOwnProperty.call(code,key)){
+        clone[key]=code[key]
+    }
+}
+console.log(clone)
 // 45. Show how to add multiple properties at once using Object.defineProperties().
+Object.defineProperty(code,"dfdfdsf",{
+    value:"this sss"
+})
+console.log(code)
 // 46. Create an object with dynamic getter property.
 // 47. Use in operator to check property presence.
 // 48. Write code to check if an object is empty (no own properties).
